@@ -37,7 +37,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Registro') }}</div>
+                    <div class="card-header">{{ __('Ingresar') }}</div>
 
                     <div class="card-body">
                         @if ($errors->any())
@@ -49,29 +49,9 @@
 
                             </div>
                         @endif
-                        <form id="formulario" class="formulario" method="POST" action="{{ route('form.register') }}">
+                        <form id="formulario" class="formulario" method="POST" action="{{route('form.login')}}">
 
                             @csrf
-
-                            <div class="form-group row mb-3">
-                                <label for="name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name">
-
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-3">
-                                <label for="last_name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="last_name" type="text" class="form-control" name="last_name">
-
-                                </div>
-                            </div>
 
                             <div class="form-group row mb-3">
                                 <label for="email"
@@ -93,30 +73,10 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-3">
-                                <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Confirmar Contraseña') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation" required autocomplete="new-password">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="politicas" name="politicas"
-                                        required>
-                                    <label class="form-check-label politicas-label" for="politicas">
-                                        He leído y acepto las políticas de privacidad
-                                    </label>
-                                </div>
-                            </div>
-
                             <div class="form-group row mt-3">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Registrarse') }}
+                                        {{ __('Iniciar sesión') }}
                                     </button>
                                 </div>
                             </div>

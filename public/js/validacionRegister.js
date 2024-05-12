@@ -16,6 +16,16 @@ $(document).ready(function () {
             email: {
                 required: true,
                 email: true,
+                // remote: {
+                //     url: "/check-email", // Ruta en tu servidor para verificar el correo electrónico
+                //     type: "post", // Método HTTP para la solicitud AJAX
+                //     data: {
+                //         // Puedes enviar otros datos junto con la solicitud si es necesario
+                //         email: function () {
+                //             return $("#email").val(); // Valor del campo de correo electrónico
+                //         },
+                //     },
+                // },
             },
             password: {
                 required: true,
@@ -36,6 +46,7 @@ $(document).ready(function () {
             email: {
                 required: "Por favor ingrese su correo electrónico",
                 email: "Por favor ingrese un correo electrónico válido",
+                //remote: "Este correo electrónico ya está registrado"
             },
             password: {
                 required: "Por favor ingrese su contraseña",
@@ -46,10 +57,11 @@ $(document).ready(function () {
                 equalTo: "Las contraseñas no coinciden",
             },
             politicas: {
-                required: "Debes aceptar las políticas de privacidad para continuar.",
+                required:
+                    "Debes aceptar las políticas de privacidad para continuar.",
             },
         },
-        errorPlacement: function(error, element) {
+        errorPlacement: function (error, element) {
             if (element.attr("name") == "politicas") {
                 error.insertAfter(element.parent().parent()); // Colocar el mensaje de error después del checkbox de políticas
                 error.addClass("error");
@@ -61,5 +73,4 @@ $(document).ready(function () {
             form.submit();
         },
     });
-
 });

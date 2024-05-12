@@ -11,7 +11,7 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        //
+        return view('auth.register');
     }
 
     public function register(Request $request)
@@ -32,7 +32,23 @@ class RegisterController extends Controller
             'password' => Hash::make($validateData['password'])
 
         ]);
-
+        Auth::loginUsingId($user->id);
         return redirect()->route('home');
     }
+
+    // public function checkEmail(Request $request)
+    // {
+    //     $email = $request->input('email');
+
+    //     // Busca el correo electrónico en la base de datos
+    //     $user = User::where('email', $email)->first();
+
+    //     if ($user) {
+    //         // El correo electrónico ya está registrado
+    //         return response()->json(false);
+    //     } else {
+    //         // El correo electrónico no está registrado
+    //         return response()->json(true);
+    //     }
+    // }
 }
