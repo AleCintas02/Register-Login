@@ -49,7 +49,8 @@
 
                             </div>
                         @endif
-                        <form id="formulario" class="formulario" method="POST" action="{{ secure_url(route('form.register')) }}">
+                        <form id="formulario" class="formulario" method="POST"
+                            action="{{ secure_url(route('form.register')) }}">
 
                             @csrf
 
