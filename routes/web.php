@@ -11,7 +11,7 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::get('/register', [RegisterController::class, 'index'])->name('register')->secure();
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
