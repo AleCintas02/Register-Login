@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/validacionRegister.js') }}"></script>
+    
 </body>
 
 </html>

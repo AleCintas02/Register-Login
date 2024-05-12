@@ -127,7 +127,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/validacionRegister.js') }}"></script>
+    <script src="https://register-login-production-244a.up.railway.app/js/validacionRegister"></script>
 </body>
 
 </html>
