@@ -127,7 +127,7 @@
         </div>
     </div>
 
-    <script src="https://register-login-production-244a.up.railway.app/js/validacionRegister"></script>
+    <script src="https://register-login-production-244a.up.railway.app/js/validacionRegister.js"></script>
 </body>
 
 </html>
