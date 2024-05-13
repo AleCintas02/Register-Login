@@ -11,12 +11,12 @@ Route::get('/', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register')->secure();
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
 
-Route::post('/enviar-registro', [RegisterController::class, 'register'])->name('form.register')->secure();
+Route::post('/enviar-registro', [RegisterController::class, 'register'])->name('form.register');
 
 //Route::post('/check-email', 'RegisterController@checkEmail');
 
