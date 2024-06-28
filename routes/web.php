@@ -24,3 +24,13 @@ Route::post('enviar-ingreso', [LoginController::class, 'login'])->name('form.log
 
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+
+Route::middleware(['auth'])->group(function () {
+    
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    });
+});
